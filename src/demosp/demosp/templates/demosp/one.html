@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ope Sanomat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+    margin-bottom: 0;
+    background-color: #4200a2;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+	}
+
+	.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+	}
+
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #4200a2 !important;
+    background-color: #fff !important;
+	}
+
+	.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+	}
+    
+    .bg-1 { 
+      background-color: #1abc9c; 
+      color: #ffffff;
+      }
+      
+      .bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 30px;
+}
+      
+    .kirjautuminen{
+    padding-top: 63px;
+    padding-bottom: 5px;    
+	}
+	
+   
+    
+	</style>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">OPE SANOMAT</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#uutiset">Uutiset</a></li>
+        <li><a href="#nakokulmia">Näkökulmia</a></li>
+        <li><a href="#vinkit">Vinkit</a></li>
+        <li><a href="#arkisto">Arkisto</a></li>
+        <li><a href="#keskustelu">Keskustelu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+     
+<div class="container bg-1 kirjautuminen">    
+   <div class="row">
+  	<div class="col-sm-12">
+      <p>Tervetuloa, {{ mpass_data.HTTP_MPASS_GIVENNAME }} {{ mpass_data.HTTP_MPASS_SN }}</p>
+    </div>       
+  </div> 
+  <div class="row">
+  	<div class="col-sm-12">
+      <p>{{ mpass_data.HTTP_MPASS_MUNICIPALITY }}, Efektilän koulukeskus{# {{ mpass_data.HTTP_MPASS_SCHOOL }} #}</p>
+    </div>       
+  </div> 
+</div>
+
+
+<div class="container text-center">    
+  <h1>Uutiset</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="{{ STATIC_URL }}demosp/img/one/luokka.png" class="img-responsive" style="width:100%" alt=luokka">
+      <h4>Sisäilmatutkimuksen tulokset näyttävät totuuden</h4>
+      <p>Pisin heistä kaikista on Aapo, ehkä ei suinkaan hartevin. Tämä jälkimmäinen etu ja kunnia on Tuomaan, 
+      joka oikein on kuuluisa hartioittensa levyyden tähden. Omituisuus, joka heitä kaikkia yhteisesti merkitsee, 
+      on heidän ruskea ihonsa ja kankea, hampunkarvainen tukkansa, jonka karheus etenkin Juhanilla on silmään pistävä...</p>
+    </div>
+    <div class="col-sm-6"> 
+      <img src="{{ STATIC_URL }}demosp/img/one/lapsi.png" class="img-responsive" style="width:100%" alt="lapsi">
+      <h4>Lasten tyytyväisyys lisääntynyt</h4>  
+      <p>illoinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, 
+      otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. 
+      Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan...</p>  
+    </div>
+   
+  </div>
+  <hr>
+</div>
+
+<div class="container text-center">    
+  <h2>Vinkkejä keväälle</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="{{ STATIC_URL }}demosp/img/one/peli.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Parhaat lautapelit</h4>
+    </div>
+    <div class="col-sm-2"> 
+      <img src="{{ STATIC_URL }}demosp/img/one/koysi.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Olympialaiset</h4>    
+    </div>
+    <div class="col-sm-2"> 
+      <img src="{{ STATIC_URL }}demosp/img/one/maali.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Äitienpäiväkortit</h4>
+    </div>
+    <div class="col-sm-2"> 
+     <img src="{{ STATIC_URL }}demosp/img/one/tabletti.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Opetusta diginä</h4>
+    </div> 
+    <div class="col-sm-2"> 
+      <img src="{{ STATIC_URL }}demosp/img/one/pallo.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Pallopelit</h4>
+    </div>     
+    <div class="col-sm-2"> 
+      <img src="{{ STATIC_URL }}demosp/img/one/jalat.png" class="img-responsive" style="width:100%" alt="peli">
+      <h4>Ulos!</h4>
+    </div> 
+  </div>
+</div><br>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Ope Sanomat <a href="https://www.haltu.fi">by HALTU<a></p> 
+</footer>
+
+</body>
+</html>

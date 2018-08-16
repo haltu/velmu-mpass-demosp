@@ -1,0 +1,41 @@
+image: docker.haltu.net/haltu/env/heliconia
+
+services:
+  - postgres:9.5
+  - memcached:1.4.25
+  - redis:3.0.6
+  - rabbitmq:3.5.7
+
+variables:
+  POSTGRES_DB: heliconia
+  POSTGRES_USER: heliconia
+  POSTGRES_PASSWORD: heliconia
+  RABBITMQ_DEFAULT_VHOST: heliconia
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - buildout
+    - cp /home/bew/local_settings.py .
+    - bin/django help
+
+help:
+  stage: test
+  script:
+    - bin/django help
+
+test:
+  stage: test
+  script:
+    - bin/test
+
+saucetest:
+  stage: test
+  script:
+    - bin/saucetest
+
+

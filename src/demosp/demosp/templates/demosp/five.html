@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Taitotori</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+
+<style>
+body {
+    padding-top: 70px; 
+}
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #7dce94;
+    z-index: 9999;
+    border: 0;
+    border-radius: 0;
+	}
+
+	.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+	}
+
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #4200a2 !important;
+    background-color: #fff !important;
+	}
+
+	.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+	}
+
+
+.img-center {
+	margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+    .bg-3 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 30px;
+}
+
+      .bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.form-group {
+    padding-top: 20px; 
+    margin: 20px 20px 0px 20px;
+}
+
+</style>
+
+<body>
+
+  
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TAITOTORI</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Alueet</a>
+                    </li>
+                    <li>
+                        <a href="#">Oma koulu</a>
+                    </li>
+                    <li>
+                        <a href="#">Keskustelu</a>
+                    </li>
+                </ul>
+            </div>
+           </div>
+       
+        </nav>
+
+
+  
+    <div class="container">
+
+   
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Tervetuloa
+                    <small>{{ mpass_data.HTTP_MPASS_GIVENNAME }} {{ mpass_data.HTTP_MPASS_SN }}, {{ mpass_data.HTTP_MPASS_MUNICIPALITY }}, Efektilän koulukeskus{# {{ mpass_data.HTTP_MPASS_SCHOOL }} #}</small>
+                </h1>
+            </div>               
+        </div>
+        
+        
+        <div class="form-group row bg-3">
+  		<label for="example-search-input" class="col-2 col-form-label">Etsi erityistaitoa tai vertaistukea</label>
+  			<div class="col-10">
+   				 <input class="form-control" type="search" value="Kirjoita hakusanat" id="example-search-input">
+  			</div>
+		</div>
+        
+        
+
+        <!-- tulokset -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Viimeiset hakutulokset</h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope1.png" alt="ope">
+                <h3>Elisa Mäkinen
+                    <small>Erityisopettaja</small>
+                </h3>
+                <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella rinteellä, liki Toukolan kylää.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope2.png" alt="ope">
+                <h3>Teppo Testiope
+                    <small>Matematiikka</small>
+                </h3>
+                <p>Sen läheisin ym­päristö on kivinen tanner, mutta alempana alkaa pellot, joissa aaltoili teräinen vilja.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope3.png" alt="ope">
+                <h3>Matti Meikäläinen
+                    <small>Kuvaamataito</small>
+                </h3>
+                <p>Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope4.png" alt="ope">
+                <h3>Mikko Mallikas
+                    <small>Kotitalous</small>
+                </h3>
+                <p>Niin lopetti päivänsä roteva mies, joka oli kaatanut enemmän kuin viisikymmentä karhua. ­</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope5.png" alt="ope">
+                <h3>Taina Tietäjä
+                    <small>Opinto-ohjaaja</small>
+                </h3>
+                <p>Olivatpa he perineet isältänsä saman voimallisen innon metsäotusten pyyntöön.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="{{ STATIC_URL }}demosp/img/five/ope6.png" alt="ope">
+                <h3>Sirpa Satumaa
+                    <small>Kuvaamataito</small>
+                </h3>
+                <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjoisella rinteellä, liki Toukolan kylää. </p>
+            </div>
+        </div>
+
+       
+    </div>
+  
+
+</body>
+
+</html>

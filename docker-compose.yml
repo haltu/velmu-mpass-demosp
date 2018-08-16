@@ -1,0 +1,50 @@
+
+heliconia:
+  stdin_open: true
+  tty: true
+  build: .
+  ports:
+    - "8000:8000"
+  volumes:
+    - .:/home/bew/bew
+    - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
+  environment:
+    - SSH_AUTH_SOCK
+    - HGUSER
+    - GIT_AUTHOR_NAME
+    - GIT_AUTHOR_EMAIL
+    - GIT_COMMITTER_NAME
+    - GIT_COMMITTER_EMAIL
+  links:
+    - memcached
+    - postgresql
+    - rabbitmq
+    - redis
+    - elasticsearch
+postgresql:
+  image: postgres:9.5
+  environment:
+    - POSTGRES_PASSWORD=heliconia
+    - POSTGRES_USER=heliconia
+    - POSTGRES_DB=heliconia
+  ports:
+    - "5432:5432"
+memcached:
+  image: memcached:1.4.25
+redis:
+  image: redis:3.0.6
+  ports:
+    - "6379:6379"
+rabbitmq:
+  image: rabbitmq:3.5.7
+  environment:
+    - RABBITMQ_DEFAULT_VHOST=heliconia
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+elasticsearch:
+  image: elasticsearch:latest
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+

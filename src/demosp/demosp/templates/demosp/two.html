@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lounaat tänään</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<style>
+.jumbotron {
+	background-image: url("{{ STATIC_URL }}demosp/img/two/ruoka.png");
+	background-size: cover;
+    background-color: #45ce65;
+    color: #fff;
+    padding: 100px 25px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.bg-1 {
+    background-color: #fbe5ca;
+}
+
+
+</style>
+
+
+<body>
+
+
+  <div class="jumbotron text-center">
+    <h1>Tervetuloa Lounaat-palveluun</h1> 
+    <h4>{{ mpass_data.HTTP_MPASS_GIVENNAME }} {{ mpass_data.HTTP_MPASS_SN }}, {{ mpass_data.HTTP_MPASS_MUNICIPALITY }}, Efektilän koulukeskus{# {{ mpass_data.HTTP_MPASS_SCHOOL }} #}</h4> 
+  </div>
+
+<div class="container-fluid text-center">
+  <h2>Tänään omassa koulussasi:</h2>
+  <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+  
+</div>
+
+<div class="container-fluid bg-1">
+   
+  <h1>Lähelläsi:</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>Lassen leipomo</h4>
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Sodexo</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Kahvila Paiste</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Caffetta</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+   
+  </div>
+  
+  <br>
+    <div class="row">
+    <div class="col-sm-3">
+      <h4>Mummola</h4>
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Toinen koulu</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Tietola</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+    <div class="col-sm-3"> 
+      <h4>Kahvila Kaunotar</h4>  
+      <p>Hernesosekeitto (G,L,K,N,S) <br>
+  Kalakeitto (G,L,K,N,S)<br>
+  Hedelmä- ja juurespalat<br>
+  Pehmeä leipä, Luomunäkkileipä<br>
+  Kasvisrasvalevite<br>
+  Ruokajuoma<br></p>
+    </div>
+   
+  </div>
+ 
+</div>
+
+
+
+
+
+</body>
+</html>

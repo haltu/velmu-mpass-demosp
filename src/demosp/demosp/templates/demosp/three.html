@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Parkkipalvelu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+<style>
+
+body { 
+    background-color: #000000; 
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.jumbotron { 
+   background: #000 url("{{ STATIC_URL }}demosp/img/three/auto.png") no-repeat center center;
+   background-size: cover;
+    color: #ffffff;
+    padding: 30px 0;
+	margin-bottom:0px;
+	}
+	
+  
+  .jumbotron .btn-store {
+  margin-top: 20px;
+  float: left;
+  
+}
+
+ .jumbotron h2 {
+  margin-top: 100px;
+  
+}
+
+.jumbotron .btn-store .btn.btn-lg, .jumbotron .btn-store .btn-group-lg > .btn {
+  padding: 0;
+}
+
+
+.bg-1 { 
+    background-color: #ff0099; 
+    color: #000000;
+}
+
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom:40px;
+	}
+	
+	
+	.btn-success {
+  color: white;
+  background-color: #6ecc14;
+  border-color: #6ecc14;
+  border-radius: 4px;
+ 
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+  color: white;
+  background-color: #000000;
+  border-color: #000000;
+  }
+  
+  
+  a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+  
+
+
+@media only screen and (max-width: 768px) {
+    
+  .btn-success {
+  margin-top: 5px;
+ 
+  }
+    
+}
+
+
+</style>
+
+
+
+<body>
+
+
+<div class="jumbotron">
+	<div class="container">
+	
+		<div class="row">
+				<div class="col-md-12">
+				 <h1>Tervetuloa Parkkipalveluun</h1>				 				                
+			     </div>
+		</div>
+		
+		    
+		<div class="row">
+				<div class="col-md-12">
+				 <h4>{{ mpass_data.HTTP_MPASS_GIVENNAME }} {{ mpass_data.HTTP_MPASS_SN }}</h4>
+				  <h4>{{ mpass_data.HTTP_MPASS_MUNICIPALITY }}, Efektilän koulukeskus{# {{ mpass_data.HTTP_MPASS_SCHOOL }} #}</h4>				                
+			     </div>
+		</div>
+		
+		<div class="row">
+				<div class="col-md-6">
+				 <h2>Parkkiaikaasi jäljellä:</h2>
+				  <h1>00:12:13</h1>	
+				                 
+			     </div>
+			     
+				<div class="col-md-6">					             
+				</div>
+		 </div>
+		 
+		 <div class="row">
+				<div class="col-md-6">
+				<button type="button" class="btn btn-success btn-store">Osta lisää aikaa</button>
+				 </div>
+			     
+				<div class="col-md-6">					             
+				</div>
+		 </div>
+		 
+       
+     </div>
+</div>
+	  
+<div class="container-fluid bg-1 text-center">
+ <h2>Tilaa uutiskirje ja saa tarjoukset</h2>
+		  <form class="form-inline">
+		<input type="email" class="form-control" size="50" placeholder="Sähköpostiosoite">
+		<button type="button" class="btn btn-success">Lähetä</button>
+				</form> 
+				
+				                    
+				
+</div>
+
+
+	 
+
+</body>
+</html>
